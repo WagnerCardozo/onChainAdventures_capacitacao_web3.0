@@ -15,7 +15,7 @@ python -m http.server
 ou
 npx serve
 Acesse no navegador:
-http://localhost:8000
+http://localhost:8000  (sugiro usar google chrome)
 
 3. Como Usar
 Após abrir o projeto:
