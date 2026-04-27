@@ -56,7 +56,6 @@ Exibe a quantidade de itens possuídos
 
 🗳️ Propostas (DAO)
 Crie uma proposta
-Navegue entre propostas com as setas
 Apoie propostas existentes
 
 5. Observações Importantes
