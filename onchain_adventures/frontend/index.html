@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Chain Adventures</title>
+
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 { color: #38bdf8; }
+        h2 { color: #94a3b8; }
+
+        button {
+            background-color: #1e293b;
+            color: white;
+            border: 1px solid #334155;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #38bdf8;
+            color: black;
+        }
+
+        input {
+            padding: 8px;
+            border-radius: 6px;
+            border: none;
+            margin: 5px;
+        }
+
+        #status {
+            margin-top: 15px;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #020617;
+            border-radius: 8px;
+            display: inline-block;
+            color: #22c55e;
+        }
+
+        #inventory {
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #020617;
+            border-radius: 10px;
+            display: inline-block;
+            min-width: 150px;
+            border: 1px solid #1e293b;
+        }
+
+        hr {
+            border: 1px solid #1e293b;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🎮 On Chain Adventures</h1>
+
+<button id="connectBtn">🔗 Conectar Carteira</button>
+<p id="status">Status: desconectado</p>
+
+<hr>
+
+<h2>👤 Jogador</h2>
+
+<div id="playerSection">
+    <input id="name" placeholder="Seu nome">
+    <button id="createBtn">Criar Personagem</button>
+</div>
+
+<div id="playerInfo" style="display:none;">
+    <p>👤 Personagem: <span id="playerName"></span></p>
+    <p>⭐ Level: <span id="playerLevel"></span></p>
+</div>
+
+<h2>💰 Economia</h2>
+<p>Saldo: <span id="balance">0</span></p>
+<button id="faucetBtn">💸 Receber Tokens</button>
+
+<h2>🛒 Loja</h2>
+
+<p>🗡️ Espada: <span id="swordPrice">-</span></p>
+<button id="buySwordBtn">Comprar Espada</button>
+
+<p>🧪 Poção: <span id="potionPrice">-</span></p>
+<button id="buyPotionBtn">Comprar Poção</button>
+
+<h2>🌿 Expedição</h2>
+<button id="stakeBtn">🌿 Enviar</button>
+<button id="claimBtn">💰 Retornar</button>
+
+<h2>🎒 Inventário</h2>
+<button id="inventoryBtn">Ver Inventário</button>
+<div id="inventory">Vazio...</div>
+
+<h2>🗳️ Propostas</h2>
+
+<div>
+    <p id="proposalTextView">Carregando...</p>
+    <p id="proposalVotes">👍 Apoios: 0</p>
+
+    <button id="prevProposal">⬅️</button>
+    <button id="nextProposal">➡️</button>
+
+    <br><br>
+
+    <button id="supportBtn">👍 Apoiar</button>
+</div>
+
+<hr>
+
+<h3>Criar proposta</h3>
+<input id="proposalText" placeholder="Nova proposta">
+<button id="createProposalBtn">Criar Proposta</button>
+
+<script src="ethers.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
